@@ -1,0 +1,51 @@
+{
+    "manifest_version": 1,
+    "modpack_version": "1.0.0",
+    "name": "My Awesome Modpack",
+    "icon": false,
+    "uuid": "c730dae3-51ea-41b9-b9d0-f89b1d2945b9",
+    "loader": {
+        "type": "fabric",
+        "version": "0.14.18",
+        "minecraft_version": "1.19.3"
+    },
+    "mods": [
+        {
+            "name": "Fabric API",
+            "version": "0.76.0+1.19.3",
+            "source": "modrinth",
+            "location": "fabric-api"
+        },
+        {
+            "name": "Sodium",
+            "version": "mc1.19.3-0.4.9",
+            "source": "modrinth",
+            "location": "sodium"
+        },
+        {
+            "name": "Iris",
+            "version": "1.5.2+1.19.3",
+            "source": "modrinth",
+            "location": "iris"
+        }
+    ],
+    "shaderpacks": [
+        {
+            "name": "Complementary Shaders v4",
+            "version": "v4.7.1",
+            "source": "modrinth",
+            "location": "complementary-shaders-v4"
+        }
+    ],
+    "resourcepacks": [
+        {
+            "name": "Avalon 32x",
+            "version": "v1.4.5",
+            "source": "modrinth",
+            "location": "avalon-32x"
+        }
+    ],
+    "include": [
+        "shaderpacks"
+    ]
+}
