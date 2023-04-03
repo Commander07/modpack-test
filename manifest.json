@@ -2,7 +2,7 @@
     "manifest_version": 1,
     "modpack_version": "1.0.0",
     "name": "My Awesome Modpack",
-    "icon": false,
+    "icon": true,
     "uuid": "c730dae3-51ea-41b9-b9d0-f89b1d2945b9",
     "loader": {
         "type": "fabric",
