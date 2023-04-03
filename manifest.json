@@ -43,6 +43,12 @@
             "version": "v1.4.5",
             "source": "modrinth",
             "location": "avalon-32x"
+        },
+        {
+            "name": "Quiet Thunder",
+            "source": "ddl",
+            "location": "https://edge.forgecdn.net/files/2799/600/QuietThunder.zip",
+            "version": ""
         }
     ],
     "include": [
