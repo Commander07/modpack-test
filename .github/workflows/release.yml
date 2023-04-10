@@ -5,6 +5,8 @@ jobs:
     name: "Zip and release includes"
     runs-on: "ubuntu-latest"
     steps:
+      - name: checkout repo
+        uses: actions/checkout@v2.3.4
       - name: "Zip include"
         run: "python3 zip_include.py"
       - uses: "marvinpinto/action-automatic-releases@latest"
