@@ -1,0 +1,15 @@
+name: "Release modified configs"
+on: push
+jobs:
+  zip_release_include:
+    name: "Zip and release includes"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Zip include"
+        run: "python3 zip_include.py"
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          files: |
+            include.zip
