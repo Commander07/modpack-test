@@ -2,7 +2,7 @@
     "manifest_version": 1,
     "modpack_version": "1.0.0",
     "name": "My Awesome Modpack",
-    "icon": false,
+    "icon": true,
     "uuid": "c730dae3-51ea-41b9-b9d0-f89b1d2945b9",
     "loader": {
         "type": "fabric",
@@ -43,6 +43,12 @@
             "version": "v1.4.5",
             "source": "modrinth",
             "location": "avalon-32x"
+        },
+        {
+            "name": "Quiet Thunder",
+            "source": "ddl",
+            "location": "https://edge.forgecdn.net/files/2799/600/QuietThunder.zip",
+            "version": ""
         }
     ],
     "include": [
