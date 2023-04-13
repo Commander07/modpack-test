@@ -53,5 +53,12 @@
     ],
     "include": [
         "shaderpacks"
-    ]
+    ],
+    "features": [
+        {
+            "name": "pls work",
+            "default": true
+        }
+    ],
+    "description": "please work"
 }
