@@ -1,7 +1,9 @@
 {
-    "manifest_version": 1,
+    "manifest_version": 2,
     "modpack_version": "1.0.0",
     "name": "My Awesome Modpack",
+    "subtitle": "Main Version",
+    "description": "<p>Always included: </p><ul><li>Performance</li></ul>",
     "icon": true,
     "uuid": "c730dae3-51ea-41b9-b9d0-f89b1d2945b9",
     "loader": {
@@ -27,6 +29,19 @@
             "version": "1.5.2+1.19.3",
             "source": "modrinth",
             "location": "iris"
+        },
+        {
+            "name": "Mod Menu",
+            "version": "5.1.0-beta.4",
+            "source": "modrinth",
+            "location": "modmenu"
+        },
+        {
+            "name": "Blur (Fabric)",
+            "version": "2.6.1",
+            "source": "modrinth",
+            "location": "blur-fabric",
+            "id": "optional"
         }
     ],
     "shaderpacks": [
@@ -48,17 +63,28 @@
             "name": "Quiet Thunder",
             "source": "ddl",
             "location": "https://edge.forgecdn.net/files/2799/600/QuietThunder.zip",
-            "version": ""
+            "version": "N/A"
         }
     ],
     "include": [
-        "shaderpacks"
+        {
+            "location": "shaderpacks"
+        },
+        {
+            "location": "test",
+            "id": "test-feat"
+        }
     ],
     "features": [
         {
-            "name": "pls work",
-            "default": true
+            "name": "test",
+            "default": true,
+            "id": "test-feat"
+        },
+        {
+            "name": "Optional Mods",
+            "default": false,
+            "id": "optional"
         }
-    ],
-    "description": "please work"
+    ]
 }

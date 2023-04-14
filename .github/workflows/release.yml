@@ -1,4 +1,4 @@
-name: "Release modified configs"
+name: "Release modified includes"
 on: push
 jobs:
   zip_release_include:
@@ -8,15 +8,19 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v2.3.4
       - name: "Zip include"
-        run: "python3 zip_include.py"
+        id: zip_include
+        run: |
+          echo "files=$(python3 zip_include.py)" >> $GITHUB_OUTPUT
+      - name: "Debug"
+        run: echo "${{ env.files }}"
       - name: Extract branch name
         shell: bash
         run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >>$GITHUB_OUTPUT
         id: extract_branch
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - uses: meeDamian/github-release@2.0
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: false
-          automatic_release_tag: "${{ steps.extract_branch.outputs.branch }}"
-          files: |
-            include.zip
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: "${{ steps.extract_branch.outputs.branch }}"
+          files: ${{ steps.zip_include.outputs.files }}
+          allow_override: true
+          gzip: false
