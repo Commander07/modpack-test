@@ -23,3 +23,4 @@ jobs:
           tag: "${{ steps.extract_branch.outputs.branch }}"
           files: ${{ steps.zip_include.outputs.files }}
           allow_override: true
+          gzip: false
