@@ -10,9 +10,9 @@ jobs:
       - name: "Zip include"
         run: |
           EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-          echo "FILES<<$EOF" >> $GITHUB_ENV
+          echo "FILES<<$EOF" >> $GITHUB_OUTPUT
           python zip_include.py >> $GITHUB_OUTPUT
-          echo "$EOF" >> $GITHUB_ENV
+          echo "$EOF" >> $GITHUB_OUTPUT
       - name: Extract branch name
         shell: bash
         run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >>$GITHUB_OUTPUT
