@@ -8,7 +8,11 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v2.3.4
       - name: "Zip include"
-        run: echo "FILES=$(python zip_include.py)" >>$GITHUB_OUTPUT
+        run: |
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          echo "FILES<<$EOF" >> $GITHUB_ENV
+          python zip_include.py >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_ENV
       - name: Extract branch name
         shell: bash
         run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >>$GITHUB_OUTPUT
