@@ -31,4 +31,4 @@ for k, v in to_be_zipped.items():
             _zip.write(file, compress_type=zipfile.ZIP_DEFLATED)
     zips.append(f"{k}.zip")
 
-print('\n'.join(zips))
+print(*zips)
