@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v2.3.4
       - name: "Zip include"
         run: |
-          echo "$(python3 zip_include.py)" >> $GITHUB_OUTPUT
+          echo "files=$(python3 zip_include.py)" >> $GITHUB_OUTPUT
       - name: "Debug"
         run: echo "${{ env.files }}"
       - name: Extract branch name
@@ -20,4 +20,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: "${{ steps.extract_branch.outputs.branch }}"
-          files: ${{ env.FILES }}
+          files: ${{ env.files }}
