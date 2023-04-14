@@ -21,3 +21,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: "${{ steps.extract_branch.outputs.branch }}"
           files: ${{ env.files }}
+          allow_override: true
