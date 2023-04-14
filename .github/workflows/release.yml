@@ -8,6 +8,7 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v2.3.4
       - name: "Zip include"
+        id: zip_include
         run: |
           echo "files=$(python3 zip_include.py)" >> $GITHUB_OUTPUT
       - name: "Debug"
@@ -20,5 +21,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: "${{ steps.extract_branch.outputs.branch }}"
-          files: ${{ env.files }}
+          files: ${{ steps.zip_include.outputs.files }}
           allow_override: true
