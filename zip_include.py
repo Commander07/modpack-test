@@ -26,10 +26,9 @@ for include in manifest["include"]:
 zips = []
 
 for k, v in to_be_zipped.items():
-    os.makedirs("out", exist_ok=True)
-    with zipfile.ZipFile(f"out/{k}.zip", "w") as _zip:
+    with zipfile.ZipFile(f"{k}.zip", "w") as _zip:
         for file in v:
             _zip.write(file, compress_type=zipfile.ZIP_DEFLATED)
-    zips.append(f"out/{k}.zip")
+    zips.append(f"{k}.zip")
 
 print('\n'.join(zips))
