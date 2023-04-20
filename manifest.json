@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "modpack_version": "1.0.0",
     "name": "My Awesome Modpack",
     "subtitle": "Main Version",
@@ -16,32 +16,66 @@
             "name": "Fabric API",
             "version": "0.76.0+1.19.3",
             "source": "modrinth",
-            "location": "fabric-api"
+            "location": "fabric-api",
+            "authors": [
+                {
+                    "name": "sfPlayer1",
+                    "link": "https://modrinth.com/user/sfPlayer1"
+                },
+                {
+                    "name": "modmuss50",
+                    "link": "https://modrinth.com/user/modmuss50"
+                }
+            ]
         },
         {
             "name": "Sodium",
             "version": "mc1.19.3-0.4.9",
             "source": "modrinth",
-            "location": "sodium"
+            "location": "sodium",
+            "authors": [
+                {
+                    "name": "jellysquid3",
+                    "link": "https://modrinth.com/user/jellysquid3"
+                }
+            ]
         },
         {
             "name": "Iris",
             "version": "1.5.2+1.19.3",
             "source": "modrinth",
-            "location": "iris"
+            "location": "iris",
+            "authors": [
+                {
+                    "name": "coderbot",
+                    "link": "https://modrinth.com/user/coderbot"
+                }
+            ]
         },
         {
             "name": "Mod Menu",
             "version": "5.1.0-beta.4",
             "source": "modrinth",
-            "location": "modmenu"
+            "location": "modmenu",
+            "authors": [
+                {
+                    "name": "Prospector",
+                    "link": "https://modrinth.com/user/Prospector"
+                }
+            ]
         },
         {
             "name": "Blur (Fabric)",
             "version": "2.6.1",
             "source": "modrinth",
             "location": "blur-fabric",
-            "id": "optional"
+            "id": "optional",
+            "authors": [
+                {
+                    "name": "Motschen",
+                    "link": "https://modrinth.com/user/Motschen"
+                }
+            ]
         }
     ],
     "shaderpacks": [
@@ -49,7 +83,13 @@
             "name": "Complementary Shaders v4",
             "version": "v4.7.1",
             "source": "modrinth",
-            "location": "complementary-shaders-v4"
+            "location": "complementary-shaders-v4",
+            "authors": [
+                {
+                    "name": "EminGT",
+                    "link": "https://modrinth.com/user/EminGT"
+                }
+            ]
         }
     ],
     "resourcepacks": [
@@ -57,13 +97,25 @@
             "name": "Avalon 32x",
             "version": "v1.4.5",
             "source": "modrinth",
-            "location": "avalon-32x"
+            "location": "avalon-32x",
+            "authors": [
+                {
+                    "name": "ItsChawk_",
+                    "link": "https://modrinth.com/user/ItsChawk_"
+                }
+            ]
         },
         {
             "name": "Quiet Thunder",
             "source": "ddl",
             "location": "https://edge.forgecdn.net/files/2799/600/QuietThunder.zip",
-            "version": "N/A"
+            "version": "N/A",
+            "authors": [
+                {
+                    "name": "thefear900",
+                    "link": "https://legacy.curseforge.com/members/thefear900"
+                }
+            ]
         }
     ],
     "include": [
