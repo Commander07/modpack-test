@@ -5,7 +5,7 @@
     "subtitle": "Alt Version",
     "description": "<p>Always included: </p><ul><li>Performance</li></ul>",
     "icon": true,
-    "uuid": "c730dae3-51ea-41b9-b9d0-f89b1d2945b9",
+    "uuid": "8af8a934-eaac-45e9-95fe-914ae2028e10",
     "loader": {
         "type": "fabric",
         "version": "0.14.18",
