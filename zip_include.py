@@ -3,9 +3,19 @@ Zips all files listed in manifest["include"]
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import zipfile
+
+
+def md5(fname: str) -> str:
+    hash_md5 = hashlib.md5()
+    with open(fname, "rb") as f:
+        for chunk in iter(lambda: f.read(4096), b""):
+            hash_md5.update(chunk)
+    return hash_md5.hexdigest()
+
 
 with open("manifest.json", "r") as f:
     manifest = json.load(f)
@@ -30,5 +40,14 @@ for k, v in to_be_zipped.items():
         for file in v:
             _zip.write(file, compress_type=zipfile.ZIP_DEFLATED)
     zips.append(f"{k}.zip")
+
+hashes = {}
+
+for zip in zips:
+    hashes[zip] = md5(zip)
+
+
+with open("hashes.json", "w") as f:
+    json.dump(hashes, f)
 
 print(*zips)
